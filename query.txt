@@ -1,0 +1,35 @@
+query  {
+    transactions(first:100, after: $cursor) {
+        edges {
+            cursor
+            node {
+                id
+                recipient
+                owner {
+                    address
+                    key
+                }
+                fee {
+                    winston
+                    ar
+                }
+                quantity {
+                    winston
+                    ar
+                }
+                data {
+                    size
+                    type
+                }
+                block {
+                    id
+                    timestamp
+                }
+                tags {
+                    name
+                    value
+                }
+            }
+        }
+    }
+}
